@@ -1,0 +1,92 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 微軟正黑體;
+    color: burlywood;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a:hover{
+    background-color: black;
+}
+
+.navbar #logo{
+    display: inline block;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar ul{
+    display: inline block;
+}
+
+.navbar ul li{
+    display: inline-block;
+    font-size: 30px;
+}
+
+.onepage{
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+#main{
+    background-image: url(pic/main.jpg);
+}
+
+#story{
+    background-image: url(pic/story.jpg);
+}
+
+.story-box{
+    background-color:rgba(255,255,255,0.5);
+    width:60%;
+    margin:100px auto 0px auto;
+    padding:30px;
+    height: 70%;
+}
+
+#menu{
+    background-image: url(pic/menu.jpg);
+}
+
+#promise{
+    background-image: url(pic/promise.jpg);
+}
+
+#about{
+    background-image: url(pic/about.jpg);
+}
+
+#contact{
+    background-image: url(pic/contact.jpg);
+}
+
+/* 置頂鈕 */
+.btn-top img{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+}
