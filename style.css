@@ -6,24 +6,28 @@ html{
     padding: 0;
     margin: 0;
     font-family: 微軟正黑體;
-    color: burlywood;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    /* text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); */
+    color: black;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
+/* 導引列 */
 .navbar{
     position: fixed;
     top: 0px;
     width: 100%;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
-.navbar a:hover{
-    background-color: black;
+.navbar #logo img{
+    padding: 10px;
+    height: 60px;
 }
 
-.navbar #logo{
-    display: inline block;
+.navbar img{
+    vertical-align: middle;
 }
 
 .navbar a{
@@ -31,62 +35,246 @@ html{
 }
 
 .navbar ul{
-    display: inline block;
+    display: inline-block;
 }
 
 .navbar ul li{
     display: inline-block;
     font-size: 30px;
+    padding: 10px;
+    font-weight: 500;
 }
 
-.onepage{
-    width: 100%;
-    height: 1000px;
+.navbar ul li span{
+    margin-left: 5px;
+}
+
+.navbar ul li img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.navbar ul li:hover img{
+    transform: rotate(10deg);
+}
+
+.navbar ul li:hover{
+    font-weight: bold;
+}
+/* 右側導覽列 */
+
+.navbar-right{
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+.navbar-right ul li{
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset;
+    border-radius: 999em;
+    cursor: pointer;
+    list-style: none;
+}
+.navbar-right ul .active{
+    background-color: burlywood;
+}
+
+/* 一頁式底圖 */
+.onepage01{
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: 20% center;
     margin:0 auto;
-    box-sizing: border-box;
     background-attachment: fixed;
 }
 
-#main{
-    background-image: url(pic/main.jpg);
+.onepage02{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    background-attachment: fixed;
 }
 
-#story{
-    background-image: url(pic/story.jpg);
+.onepage03{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    background-attachment: fixed;
 }
 
-.story-box{
-    background-color:rgba(255,255,255,0.5);
-    width:60%;
-    margin:100px auto 0px auto;
-    padding:30px;
-    height: 70%;
+.onepage04{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    background-attachment: fixed;
 }
 
-#menu{
-    background-image: url(pic/menu.jpg);
+.onepage05{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    background-attachment: fixed;
 }
 
-#promise{
-    background-image: url(pic/promise.jpg);
+.onepage06{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 20% center;
+    margin:0 auto;
+    background-attachment: fixed;
 }
 
-#about{
-    background-image: url(pic/about.jpg);
+/* 每頁底圖 */
+
+#one-main{
+    background-image: url(pic/main01.jpg);
 }
 
-#contact{
-    background-image: url(pic/contact.jpg);
+#one-story{
+    background-image: url(pic/story01.jpg);
 }
 
-/* 置頂鈕 */
+#one-menu{
+    background-image: url(pic/menu01.jpg);
+}
+
+#one-promise{
+    background-image: url(pic/promise01.jpg);
+}
+
+#one-about{
+    background-image: url(pic/about01.jpg);
+}
+
+#one-contact{
+    background-image: url(pic/contact01.jpg);
+}
+
+/* 回頂部按鈕 */
+.btn-top{
+    overflow:hidden;
+}
+
 .btn-top img{
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     width: 50px;
     height: 50px;
     border-radius: 999em;
+    /* 滑入圖片放大 */
+    transform:scale(1,1);
+    transition: all 0.3s ease-out;
+}
+
+.btn-top img:hover{
+    transform:scale(1.1,1.1);
+}
+
+/* 每頁內容半透明底圖 */
+.content-box{
+    background-color:rgba(255,255,255,0.5);
+    width:80%;
+    height: 70%;
+    padding: 100px;
+    box-shadow:1px 1px 5px gray;
+    margin: auto auto;
+}
+
+/* 品質保證 */
+#promise img{
+    width: 30%;
+    height: 100%; 
+    box-shadow:1px 1px 3px black;
+}
+
+.promise01{
+    position: relative;
+    z-index: 1;
+    background-color:rgba(0,255,255,0.5);
+}
+
+#promise img:hover .promise01{
+    background-color:rgba(0,0,255,0.5);
+}
+
+/* 關於我們 */
+.about-map{
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    box-shadow:5px 5px 5px gray;
+}
+
+.about-text{
+    display: inline-block;
+    font-size: 30px;
+    vertical-align:top;
+    width: 50%;
+    margin-left: 20px;
+}
+
+
+
+/* 聯絡我們(表單) */
+form{
+    box-shadow:1px 1px 1px gray;
+    width:60%;
+    height:500px;
+    margin:10px auto 0px auto;
+    padding:20px;
+  }
+
+input[type="text"], input[type="email"], textarea{
+    width:100%;
+    height:35px;
+    padding:3px 5px;
+    margin:5px 0;
+    box-sizing:border-box;
+  }
+
+textarea{
+    height:200px;
+  }
+
+input[type="reset"], input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    margin: 10px 20px;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.5);
+    background-color:rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+  }
+  
+input[type="reset"]:hover, input[type="submit"]:hover{
+    background-color:rgba(255, 255, 255, 0.1);
+}
+
+.form-button{
+    text-align: center;
+}
+
+#contact{
+    font-size: 26px;
+}
+
+/* 去廣告*/
+img[alt="www.000webhost.com"]{
+    display: none;
 }

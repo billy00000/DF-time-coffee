@@ -6,68 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>coffee</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript.js"></script>
 </head>
 <body>
 
-    <!-- 導覽 -->
-    <div class="navbar" style="background-color:rgb(71, 140, 204)">
-        <ul>
-            <span id="logo"><a href="#"><img src="pic/logo.png" alt="logo"></a></span>
-            <li><a href="#main">首頁</a></li>
-            <li><a href="#story">品牌故事</a></li>
-            <li><a href="#menu">咖啡菜單</a></li>
-            <li><a href="#promise">品質保證</a></li>
-            <li><a href="#about">位置資訊</a></li>
-            <li><a href="#contact">聯絡我們</a></li>
-
-
-            <!-- <li class="nav-link">
-                <a class="nav-link" href="#">
-                    <div class="title-icon">
-                        <img src="pic/logo.png" alt="首頁">
-                    </div>
-                    <div class="title-name">
-                        <h1>首頁</h1>
-                        <h2>Home</h2>
-                    </div>
-                </a>
-                <a class="nav-link" href="#story">
-                   <div class="title-icon">
-                        <img src="pic/logo.png" alt="關於我們">
-                    </div>
-                    <div class="title-name">
-                        <h1>關於我們</h1>
-                        <h2>About us</h2>
-                    </div> 
-                </a>
-            </li> -->
-        </ul>  
-        <!-- 嘗試捲動式下滑 -->
-            <!-- <div class="test">
-                <a href="#story1" onclick="tabToggleAndMoveTo(this);"s>test</a>
-            </div> -->
-        </div>
-        
+    <!-- 導覽列 -->
+    <div class="navbar">
+        <span id="logo"><a href="#"><img src="pic/logo.png" alt="logo"></a></span>
+        <ul>  
+            <li><a href="#one-main"><img src="pic/coffee bean.png" alt=""><span>首頁</span> </a></li>
+            <li><a href="#one-story"><img src="pic/coffee bean.png" alt=""><span>品牌故事</span></a></li>
+            <li><a href="#one-menu"><img src="pic/coffee bean.png" alt=""><span>咖啡菜單</span></a></li>
+            <li><a href="#one-promise"><img src="pic/coffee bean.png" alt=""><span>品質保證</span></a></li>
+            <li><a href="#one-about"><img src="pic/coffee bean.png" alt=""><span>關於我們</span></a></li>
+            <li><a href="#one-contact"><img src="pic/coffee bean.png" alt=""><span>聯絡我們</span></a></li>
+        </ul>      
     </div>
-    <!-- 各分頁底圖 -->
+    <!-- 右側導覽列 -->
+    <div class="navbar-right">
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- 各分頁 -->
     <div class="box">
-        <div class="onepage" id="main"></div>
-        <div class="onepage" id="story">
-            <div class="story-box">
+        <div class="onepage01" id="one-main"></div>
+        <div class="onepage02" id="one-story">
+            <div class="content-box" id="story">
                 <p>test1</p>
                 <p>test2</p>
             </div>
         </div>
-        <div class="onepage" id="menu"></div>
-        <div class="onepage" id="promise"></div>
-        <div class="onepage" id="about"></div>
-        <div class="onepage" id="contact"></div>
+        <div class="onepage03" id="one-menu">
+            <div class="content-box" id="menu">
+                
+            </div>
+        </div>
+        
+        <div class="onepage04" id="one-promise">
+            <div class="content-box" id="promise">
+                <img src="pic/quality01.jpg" alt="保證">
+                <div class="promise01">text</div>
+                <img src="pic/quality02.jpg" alt="保證">
+                <img src="pic/quality03.jpg" alt="保證">
+                
+             </div>
+        </div>
+        <div class="onepage05" id="one-about">
+            <div class="content-box" id="about">
+                <div class="about-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.4593462185476!2d120.68488828341036!3d24.15214813509328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d66226c3efd%3A0xae87356e4c82082f!2z5Lit5Y-L55m-6LKo!5e0!3m2!1szh-TW!2stw!4v1561086321086!5m2!1szh-TW!2stw" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="about-text">
+                    <p>店名：咖啡店</p>
+                    <p>位置：404台中市北區三民路三段161號</p>
+                    <p>營業時間</p>
+                    <table border="1">
+                            <tr>
+                                <td>星期一</td>
+                                <td>公休日</td>
+                            </tr>
+                            <tr>
+                                <td>星期二～星期五</td>
+                                <td>10:00～20:00</td>
+                            </tr>
+                            <tr>
+                                <td>星期六～星期日</td>
+                                <td>09:00～21:00</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </div>
+        <div class="onepage06" id="one-contact">
+            <div class="content-box" id="contact">
+                <form method="post" action="#">
+                    <fieldset>
+                        <div>
+                            <label for="user">姓名</label>
+                            <input type="text" id="user" name="user" placeholder="請輸入姓名(必填)" required>
+                            <label for="email">信箱：</label>
+                            <input type="email" id="email "name="email" placeholder="請輸入信箱">
+                            <label for="introduction">意見回饋</label>
+                            <textarea name="intrduction" id="intrduction" cols="40" rows="10"></textarea>
+                            <div class="form-button">
+                                <input type="submit" value="確認送出">
+                                <input type="reset" value="清空重填">
+                            </div>
+                        </div>
+                    </fieldset>
+            </div>
+        </div>
 
 
         
     </div>
 
-    <!-- 置頂鈕 -->
+    <!-- 回頂部按鈕 -->
     <div class="btn-top"><a href="#"><img src="pic/logo.png" alt=""></a></div>
 
 
