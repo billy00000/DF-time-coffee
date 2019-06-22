@@ -84,52 +84,7 @@ html{
 }
 
 /* 一頁式底圖 */
-.onepage01{
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: 20% center;
-    margin:0 auto;
-    background-attachment: fixed;
-}
-
-.onepage02{
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: 20% center;
-    margin:0 auto;
-    background-attachment: fixed;
-}
-
-.onepage03{
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: 20% center;
-    margin:0 auto;
-    background-attachment: fixed;
-}
-
-.onepage04{
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: 20% center;
-    margin:0 auto;
-    background-attachment: fixed;
-}
-
-.onepage05{
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: 20% center;
-    margin:0 auto;
-    background-attachment: fixed;
-}
-
-.onepage06{
+.onepage{
     width: 100vw;
     height: 100vh;
     background-size: cover;
