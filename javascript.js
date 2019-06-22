@@ -34,7 +34,7 @@ $(document).ready(function() {
             $("html,body").animate({
                 "scrollTop": $(".p0" + page).offset().top
             })
-            $(this).css("background-color", "#43a55f");
+            $(this).css("background-color", "burlywood");
         })
     }
 
@@ -55,22 +55,22 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(window).scrollTop() >= $(".p01").offset().top && $(window).scrollTop() < $(".p02").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(0)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(0)").css("background-color", "burlywood")
         } else if ($(window).scrollTop() >= $(".p02").offset().top && $(window).scrollTop() < $(".p03").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(1)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(1)").css("background-color", "burlywood")
         } else if ($(window).scrollTop() >= $(".p03").offset().top && $(window).scrollTop() < $(".p04").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(2)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(2)").css("background-color", "burlywood")
         } else if ($(window).scrollTop() >= $(".p04").offset().top && $(window).scrollTop() < $(".p05").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(3)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(3)").css("background-color", "burlywood")
         } else if ($(window).scrollTop() >= $(".p05").offset().top && $(window).scrollTop() < $(".p06").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(4)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(4)").css("background-color", "burlywood")
         } else if ($(window).scrollTop() >= $(".p06").offset().top) {
             $(".navbar-right li").css("background-color", "white") //除了被點擊到的游標，其他都恢復成原來的顏色
-            $(".navbar-right li:eq(5)").css("background-color", "#46dd46")
+            $(".navbar-right li:eq(5)").css("background-color", "burlywood")
         }
     })
 })

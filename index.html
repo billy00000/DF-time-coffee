@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>coffee</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <!-- 導覽列 -->
-    <div class="navbar">
-        <span id="logo"><a href="#"><img src="pic/logo.png" alt="logo"></a></span>
-        <ul>  
-            <li><a href="#one-main"><img src="pic/coffee bean.png" alt=""><span>首頁</span> </a></li>
-            <li><a href="#one-story"><img src="pic/coffee bean.png" alt=""><span>品牌故事</span></a></li>
-            <li><a href="#one-menu"><img src="pic/coffee bean.png" alt=""><span>咖啡菜單</span></a></li>
-            <li><a href="#one-promise"><img src="pic/coffee bean.png" alt=""><span>品質保證</span></a></li>
-            <li><a href="#one-about"><img src="pic/coffee bean.png" alt=""><span>關於我們</span></a></li>
-            <li><a href="#one-contact"><img src="pic/coffee bean.png" alt=""><span>聯絡我們</span></a></li>
-        </ul>      
-    </div>
+    <!-- hamburger menu參考網址 https://codepen.io/miguelml/pen/Wromzv?editors=1100 -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <span id="logo"><a href="#"><img src="pic/logo.png" alt="logo"></a></span>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#one-main"><img src="pic/coffee bean.png" alt=""><span>首頁</span> </a></li>
+                    <li><a href="#one-story"><img src="pic/coffee bean.png" alt=""><span>品牌故事</span></a></li>
+                    <li><a href="#one-menu"><img src="pic/coffee bean.png" alt=""><span>咖啡菜單</span></a></li>
+                    <li><a href="#one-promise"><img src="pic/coffee bean.png" alt=""><span>品質保證</span></a></li>
+                    <li><a href="#one-about"><img src="pic/coffee bean.png" alt=""><span>關於我們</span></a></li>
+                    <li><a href="#one-contact"><img src="pic/coffee bean.png" alt=""><span>聯絡我們</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- 右側導覽列 -->
     <div class="navbar-right">
         <ul>
@@ -35,30 +51,33 @@
 
     <!-- 各分頁 -->
     <div class="box">
-        <div class="onepage" class="p01" id="one-main"></div>
-        <div class="onepage" class="p02" id="one-story">
-            <div class="content-box" id="story">
+        <!-- 首頁 -->
+        <div class="onepage p01" id="one-main"></div>
+        <!-- 品牌故事 -->
+        <div class="onepage p02" id="one-story">
+            <div class="content-box" id="story" data-aos="fade-up-right" data-aos-offset="200" data-aos-delay="80">
                 <p>test1</p>
                 <p>test2</p>
             </div>
         </div>
-        <div class="onepage" class="p03" id="one-menu">
-            <div class="content-box" id="menu">
+        <!-- 咖啡菜單 -->
+        <div class="onepage p03" id="one-menu">
+            <div class="content-box" id="menu" data-aos="fade-up-right" data-aos-offset="200"  data-aos-delay="80">
                 
             </div>
         </div>
-        
-        <div class="onepage" class="p04" id="one-promise">
-            <div class="content-box" id="promise">
+        <!-- 品質保證 -->
+        <div class="onepage p04" id="one-promise">
+            <div class="content-box" id="promise" data-aos="fade-up-right" data-aos-offset="200" data-aos-delay="80">
                 <img src="pic/quality01.jpg" alt="保證">
-                <div class="promise01">text</div>
                 <img src="pic/quality02.jpg" alt="保證">
                 <img src="pic/quality03.jpg" alt="保證">
                 
              </div>
         </div>
-        <div class="onepage" class="p05" id="one-about">
-            <div class="content-box" id="about">
+        <!-- 關於我們 -->
+        <div class="onepage p05" id="one-about">
+            <div class="content-box" id="about" data-aos="fade-up-right" data-aos-offset="200" data-aos-delay="80">
                 <div class="about-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.4593462185476!2d120.68488828341036!3d24.15214813509328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d66226c3efd%3A0xae87356e4c82082f!2z5Lit5Y-L55m-6LKo!5e0!3m2!1szh-TW!2stw!4v1561086321086!5m2!1szh-TW!2stw" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
@@ -83,10 +102,11 @@
                 </div>
             </div>
         </div>
-        <div class="onepage" class="p06" id="one-contact">
-            <div class="content-box" id="contact">
+        <!-- 聯絡我們 -->
+        <div class="onepage p06" id="one-contact">
+            <div class="content-box" id="contact" data-aos="fade-up-right" data-aos-offset="200" data-aos-delay="80">
                 <form method="post" action="#">
-                    <fieldset>
+                    <fieldset class="form">
                         <div>
                             <label for="user">姓名</label>
                             <input type="text" id="user" name="user" placeholder="請輸入姓名(必填)" required>
@@ -100,7 +120,12 @@
                             </div>
                         </div>
                     </fieldset>
+                </form>     
             </div>
+        </div>
+
+        <div class="footer">
+            Billy coffee-shop &copy;2019
         </div>
 
 
@@ -109,7 +134,12 @@
 
     <!-- 回頂部按鈕 -->
     <div class="btn-top"><a href="#"><img src="pic/logo.png" alt=""></a></div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
