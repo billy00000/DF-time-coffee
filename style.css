@@ -12,12 +12,18 @@ html{
     box-sizing: border-box;
 }
 
+/* logo線上生成 http://www.akuziti.com/ 潮字社时光寓意创作(時光寓意) #FF7000 */
+
 .logo img{
-    padding: 5px;
-    height: 50px;
     position: fixed;
-    z-index: 2000;
-    margin-left: 2%;
+    z-index: 1001;
+    left: 3%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.logo img:hover{
+    
 }
 
 /* 導引列 */
@@ -69,28 +75,26 @@ html{
     margin-bottom: 0;
     top: 0px;
     width: 100%;
-    height: 50px;
+    height: 70px;
     box-shadow:0px 2px 2px gray;  
     border-color: transparent;
     position: fixed;
 }
 
 .navbar-collapse ul li img{
-    width: 26px;
-    height: 26px;
-    vertical-align: middle;
+    width: 30px;
+    height: 30px;
 }
 
 .navbar-collapse ul li{
-    font-size: 26px;
+    font-size: 36px;
     text-align: center;
-    margin: 0 auto;
+    margin-top: 10px;
     padding: 0;
 }
 
 .navbar-collapse ul li a{
     padding: 10px;
-    text-align: center;
 }
 
 .navbar-collapse ul li:hover{
@@ -109,9 +113,23 @@ html{
     border-color: transparent;
 }
 
-.navbar-collapse{
-    background-color: rgba(255, 255, 255, 0.8);
+.navbar-default{
+    background-color: rgba(255, 255, 255, 1);
 }
+
+.navbar-collapse{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav{
+    margin: 0 5px;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse{
+    padding-left: unset;
+    padding-right: unset;
+}
+
 
 /* 右側導覽列 */
 
@@ -120,6 +138,7 @@ html{
     top: 50%;
     right: 30px;
     transform:scale(2,2);
+    z-index: 2;
 }
 .navbar-right ul li{
     width: 10px;
@@ -140,13 +159,28 @@ html{
     width: 100%;
     height: 100vh;
     margin:0 auto;
-    padding-top: 100px;
+    padding-top: 150px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     position: relative;
 }
+
+/* 每頁置中說明文字 */
+.top-text{
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 50px;
+}
+
 
 /* 每頁底圖 */
 
@@ -160,13 +194,6 @@ html{
 
 #one-menu{
     background-image: url(pic/menu.jpg);
-}
-
-#one-menu span{
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    color: #fff;
 }
 
 #one-promise{
@@ -189,7 +216,7 @@ html{
 .btn-top img{
     position: fixed;
     bottom: 15px;
-    right: 15px;
+    right: 20px;
     width: 50px;
     height: 50px;
     border-radius: 999em;
@@ -214,23 +241,23 @@ html{
 
 /* 品牌故事 */
 
-#story{ position:relative;}
+#story{ 
+    position:relative;
+}
 #story{
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.story-img{
-    width: 100%;
-}
-
 .story-text{
     width: 100%;
+    padding: 30px;
+    font-size: 30px;
 }
 
 #story img{
-    width: 100%;
-    height: 100%;
+    padding: 20px;
+    width: 45%;
     position:absolute;
     /* 淡出淡入效果1秒 */
     -webkit-transition: opacity 1s ease-in-out;
@@ -276,7 +303,7 @@ html{
     display: inline-block;
 }
 
-/* 品質保證 */
+/* 用心堅持 */
 
 #promise{
     display: grid;
@@ -338,20 +365,20 @@ html{
 
 input[type="text"], input[type="email"], textarea{
     width:100%;
-    height:40px;
+    height:50px;
     padding:3px 5px;
     margin:5px 0px;
     box-sizing:border-box;
   }
 
 textarea{
-    height:100px;
+    height:150px;
   }
 
 input[type="reset"], input[type="submit"] {
     width: 40%;
     height: 40px;
-    font-size: 16px;
+    font-size: 18px;
     color:#fff;
     border:1px solid rgba(255,255,255,0.5);
     margin: auto 10px;
@@ -369,7 +396,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 }
 
 #contact label{
-    font-size: 20px;
+    font-size: 24px;
     margin: 0;
 }
 
@@ -386,8 +413,31 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
 @media only screen and (max-width: 480px){
 
+    .logo img{
+        left: 18%;
+        height: 40px;
+    }
+
+    .navbar-collapse ul li{
+        font-size: 24px;
+    }
+
+    .navbar{
+        height: 60px;
+    }
+
+    .onepage{
+        padding-top: 110px;
+    }
+    
     .content-box{
         padding: 10px;
+    }
+
+    /* 每頁置中說明文字 */
+    .top-text{
+        font-size: 28px;
+        top: 65px;
     }
 
     #menu{
@@ -409,6 +459,22 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         width: 100%;
         height: 50%;
         padding: 1px 5px;
+    }
+
+    #story{
+        grid-template-columns: unset;
+        grid-template-rows: 35% 65%;
+    }
+
+    .story-text{
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    #story img{
+        padding: 40px 20px 0 20px;
+        width:95%;
     }
 
     #promise{
@@ -440,6 +506,18 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         height: 75%;
     }
 
+    #contact label{
+        font-size: 18px;
+    }
+
+    textarea{
+        height:120px;
+    }
+
+    input[type="text"], input[type="email"]{
+        height:40px;
+    }  
+
     input[type="reset"], input[type="submit"]{
         margin: 8px auto;
         width: 70%;
@@ -447,6 +525,16 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
     .navbar-right{
         right: 5px;
+    }
+
+    .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse{
+        padding-left: unset;
+    }
+
+    .btn-top img{
+        right: 15px;
+        width: 40px;
+        height: 40px;
     }
 }
 
