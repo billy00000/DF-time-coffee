@@ -12,6 +12,14 @@ html{
     box-sizing: border-box;
 }
 
+.logo img{
+    padding: 5px;
+    height: 50px;
+    position: fixed;
+    z-index: 2000;
+    margin-left: 2%;
+}
+
 /* 導引列 */
 /* hamburger menu參考網址 https://codepen.io/miguelml/pen/Wromzv?editors=1100 */
 .navbar-default .navbar-toggle:focus,
@@ -51,32 +59,46 @@ html{
 }
 /* 參考範例結束 */
 
-.navbar{
+.navbar-toggle{
+    margin-top: 15px;
     margin-bottom: 0;
-    position: fixed;
-    top: 0px;
-    width: 100vw;
-    box-shadow:0px 2px 2px gray;  
-    border-color: transparent;
+    transform:scale(1.5,1.5);
 }
 
-.navbar #logo img{
-    padding: 10px;
-    height: 80px;
+.navbar{
+    margin-bottom: 0;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    box-shadow:0px 2px 2px gray;  
+    border-color: transparent;
+    position: fixed;
 }
 
 .navbar-collapse ul li img{
-    width: 40px;
-    height: 40px;
+    width: 26px;
+    height: 26px;
     vertical-align: middle;
 }
 
 .navbar-collapse ul li{
-    font-size: 30px;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar-collapse ul li a{
+    padding: 10px;
+    text-align: center;
 }
 
 .navbar-collapse ul li:hover{
     font-weight: bold;
+}
+
+.navbar-collapse ul li span{
+    margin-left: 5px;
 }
 
 .navbar-collapse ul li:hover img{
@@ -87,53 +109,17 @@ html{
     border-color: transparent;
 }
 
-.navbar-default{
-    background-color: burlywood;
+.navbar-collapse{
+    background-color: rgba(255, 255, 255, 0.8);
 }
-
-
-/* 
-
-.navbar-collapse ul li img{
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-}
-
-.navbar-collapse img{
-    vertical-align: middle;
-}
-
-.navbar-collapse ul{
-    display: inline-block;
-}
-
-.navbar-collapse ul li{
-    display: inline-block;
-    font-size: 30px;
-    padding: 10px;
-    font-weight: 500;
-}
-
-.navbar-collapse ul li span{
-    margin-left: 5px;
-}
-
-.navbar-collapse ul li:hover img{
-    transform: rotate(10deg);
-}
-
-.navbar-collapse ul li:hover{
-    font-weight: bold;
-} */
-
 
 /* 右側導覽列 */
 
 .navbar-right{
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 30px;
+    transform:scale(2,2);
 }
 .navbar-right ul li{
     width: 10px;
@@ -151,40 +137,48 @@ html{
 
 /* 一頁式底圖設定 */
 .onepage{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin:0 auto;
-    padding-top:100px;
+    padding-top: 100px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 /* 每頁底圖 */
 
 #one-main{
-    background-image: url(pic/main01.jpg);
+    background-image: url(pic/main.jpg);
 }
 
 #one-story{
-    background-image: url(pic/story01.jpg);
+    background-image: url(pic/story.jpg);
 }
 
 #one-menu{
-    background-image: url(pic/menu01.jpg);
+    background-image: url(pic/menu.jpg);
+}
+
+#one-menu span{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    color: #fff;
 }
 
 #one-promise{
-    background-image: url(pic/promise01.jpg);
+    background-image: url(pic/promise.jpg);
 }
 
 #one-about{
-    background-image: url(pic/about01.jpg);
+    background-image: url(pic/about.jpg);
 }
 
 #one-contact{
-    background-image: url(pic/contact01.jpg);
+    background-image: url(pic/contact.jpg);
 }
 
 /* 回頂部按鈕 */
@@ -199,23 +193,87 @@ html{
     width: 50px;
     height: 50px;
     border-radius: 999em;
-    /* 滑入圖片放大 */
     transform:scale(1,1);
     transition: all 0.3s ease-out;
 }
 
 .btn-top img:hover{
+     /* 滑入圖片放大 */
     transform:scale(1.1,1.1);
 }
 
 /* 每頁內容半透明底圖 */
 .content-box{
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgba(255,255,255,0.6);
     width:80%;
-    height: 80%;
-    padding: 100px;
+    height: 95%;
+    padding: 30px;
     box-shadow:1px 1px 5px gray;
     margin: 0 auto;
+}
+
+/* 品牌故事 */
+
+#story{ position:relative;}
+#story{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.story-img{
+    width: 100%;
+}
+
+.story-text{
+    width: 100%;
+}
+
+#story img{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    /* 淡出淡入效果1秒 */
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+#story img:last-child:hover{
+	 /* 滑入時第一張透明度設0 */
+	  opacity:0;}
+
+/* 咖啡菜單 */
+#menu{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+}
+
+#menu img{
+    width: 90%;
+    height: 70%;
+    box-shadow:0.1px 0.1px 5px gray;
+    border-radius: 1em;
+}
+
+.menu p{
+    margin: 0;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.menu-text p{
+    font-size: 18px;
+}
+
+
+.menu-text{
+    width: 100%;
+}
+
+.menu-text p{
+    display: inline-block;
 }
 
 /* 品質保證 */
@@ -225,35 +283,35 @@ html{
     grid-template-columns: auto auto auto;
 }
 
+
 #promise img{
     /* box-shadow:1px 1px 3px black; */
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* 關於我們 */
+/* 聯絡資訊 */
 #about{
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .about-map{
-    display: inline-block;
     width: 100%;
     height: 100%;
-    text-align: center;
     padding: 20px;
 }
 
 .about-text{
-    display: inline-block;
     width: 100%;
     height: 100%;
-    font-size: 30px;
+    padding: 30px;
+    font-size: 24px;
     vertical-align:top;
-    padding: 50px;
 }
 
 .about-text table{
@@ -267,11 +325,15 @@ html{
 
 
 /* 聯絡我們(表單) */
+#contact{
+    width: 40%;
+    height: 70%;
+}
+
 .form{
-    width:60%;
-    height:520px;
-    margin:5px auto;
-    padding:20px;
+    width:80%;
+    height:100%;
+    margin: 0 auto;
   }
 
 input[type="text"], input[type="email"], textarea{
@@ -283,13 +345,13 @@ input[type="text"], input[type="email"], textarea{
   }
 
 textarea{
-    height:200px;
+    height:100px;
   }
 
 input[type="reset"], input[type="submit"] {
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
+    width: 40%;
+    height: 40px;
+    font-size: 16px;
     color:#fff;
     border:1px solid rgba(255,255,255,0.5);
     margin: auto 10px;
@@ -303,10 +365,12 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
 .form-button{
     text-align: center;
+    margin-top: 10px;
 }
 
 #contact label{
-    font-size: 28px;
+    font-size: 20px;
+    margin: 0;
 }
 
 
@@ -315,9 +379,75 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     text-align: center;
     background-color: rgba(119, 58, 9, 0.76);
     height: 60px;
-    width: 100vw;
+    width: 100%;
     line-height: 60px;
     bottom: 0;
+}
+
+@media only screen and (max-width: 480px){
+
+    .content-box{
+        padding: 10px;
+    }
+
+    #menu{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+    }
+
+    .menu p{
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .menu-text p{
+        font-size: 12px;
+    }
+
+    #menu img{
+        width: 100%;
+        height: 50%;
+        padding: 1px 5px;
+    }
+
+    #promise{
+        grid-template-columns: unset;
+        grid-template-rows: 33% 33% 33%;
+    }  
+
+    #about{
+        grid-template-columns: unset;
+        grid-template-rows: 50% 50%;
+    }
+
+    .about-text{
+        font-size: 16px; 
+        padding: 20px;
+        padding-top: 5px;
+    }
+
+    .about-text table{
+        font-size: 16px; 
+    }
+
+    #one-contact{
+        padding-top: 200px;
+
+    }
+    #contact{
+        width: 60%;
+        height: 75%;
+    }
+
+    input[type="reset"], input[type="submit"]{
+        margin: 8px auto;
+        width: 70%;
+    }
+
+    .navbar-right{
+        right: 5px;
+    }
 }
 
 /* 去廣告

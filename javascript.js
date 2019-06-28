@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //  //滾動滑鼠滾輪時，移動到上一頁、下一頁的效果
+     //滾動滑鼠滾輪時，移動到上一頁、下一頁的效果
     //  n=1
     //  moving=0
     //  $(window).mousewheel(function(e){
@@ -17,7 +17,7 @@ $(document).ready(function() {
     //              }
     //          }
     //      }
-    //      $("html,body").animate({"scrollTop":$(".onepage0"+n).offset().top},function(){moving=0})
+    //      $("html,body").animate({"scrollTop":$(".p0"+n).offset().top},function(){moving=0})
     //      console.log(n)
     //  })
      
@@ -74,3 +74,4 @@ $(document).ready(function() {
         }
     })
 })
+
