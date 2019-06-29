@@ -280,15 +280,10 @@ html{
 
 #menu img{
     width: 90%;
-    height: 70%;
+    height: 220px;
     box-shadow:1px 1px 0.5px gray;
     border-radius: 1em;
     transition: all 0.5s;
-}
-
-#menu img:hover{
-    transform: rotate(3deg);
-    
 }
 
 .menu p{
@@ -297,24 +292,36 @@ html{
     margin: 0 10px;
 }
 
-.menu-text p{
-    font-size: 18px;
+.menu-one-text{
+    margin-top: 230px;
 }
 
+.menu-text p{
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 5px;
+}
 
 .menu-text{
     width: 100%;
 }
 
-.menu-text p{
-    display: inline-block;
+.flip-card table td{
+    color: rgb(221, 124, 44);
+    font-size: 30px;
+    padding: 0 10px;
+    font-weight: bold;
 }
 
-/* 用心堅持 */
+.flip-card table{
+    line-height: 40px;
+    margin: 10px;
+    margin: 0 auto;
+}
 
-#promise{
-    display: grid;
-    grid-template-columns: auto auto auto;
+.flip-card table td[colspan]{
+    font-size: 46px;
+    line-height: 50px;
 }
 
 .flip-card{
@@ -326,7 +333,6 @@ html{
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
@@ -345,11 +351,15 @@ html{
 }
 /* Style the back side */
 .flip-card-back {
-    color: white;
-    font-size: 30px;
     transform: rotateY(180deg);
   }
-  
+
+/* 用心堅持 */
+
+#promise{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
 
 #promise img{
     /* box-shadow:1px 1px 3px black; */
@@ -496,9 +506,14 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
     #menu img{
         width: 100%;
-        height: 50%;
+        height: 95px;
         padding: 1px 5px;
     }
+
+    .menu-one-text{
+        margin-top: 100px;
+    }
+
 
     #story{
         grid-template-columns: unset;
