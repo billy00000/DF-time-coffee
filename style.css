@@ -20,10 +20,11 @@ html{
     left: 3%;
     height: 50px;
     margin-top: 10px;
+    transition: all 0.3s ease-out;
 }
 
 .logo img:hover{
-    
+    transform:scale(1.1,1.1);
 }
 
 /* 導引列 */
@@ -280,8 +281,14 @@ html{
 #menu img{
     width: 90%;
     height: 70%;
-    box-shadow:0.1px 0.1px 5px gray;
+    box-shadow:1px 1px 0.5px gray;
     border-radius: 1em;
+    transition: all 0.5s;
+}
+
+#menu img:hover{
+    transform: rotate(3deg);
+    
 }
 
 .menu p{
@@ -310,6 +317,39 @@ html{
     grid-template-columns: auto auto auto;
 }
 
+.flip-card{
+    perspective: 1000px;/* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Style the back side */
+.flip-card-back {
+    color: white;
+    font-size: 30px;
+    transform: rotateY(180deg);
+  }
+  
 
 #promise img{
     /* box-shadow:1px 1px 3px black; */
@@ -338,7 +378,6 @@ html{
     height: 100%;
     padding: 30px;
     font-size: 24px;
-    vertical-align:top;
 }
 
 .about-text table{
@@ -414,8 +453,8 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 @media only screen and (max-width: 480px){
 
     .logo img{
-        left: 18%;
-        height: 40px;
+        left: 20%;
+        height: 38px;
     }
 
     .navbar-collapse ul li{
