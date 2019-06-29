@@ -75,3 +75,34 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function(){
+    $('.your-class').slick({
+        centerMode: true,
+        centerPadding: '100px',
+        autoplay: true,
+        autoplaySpeed: 2500,
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '60px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '60px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    }
+)
+

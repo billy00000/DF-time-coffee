@@ -2,9 +2,10 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D&F time-coffee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css"> 
@@ -13,7 +14,7 @@
 
     <!-- 導覽列 -->
     <!-- hamburger menu參考網址 https://codepen.io/miguelml/pen/Wromzv?editors=1100 -->
-    <div class="logo"><a href="#"><img src="pic/logo.png" alt="logo"></a></div>
+    <div class="logo"><a href="#"><img src="pic/logo.png" alt="時光咖啡"></a></div>
     
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -53,24 +54,41 @@
     <!-- 各分頁 -->
     <div class="box">
         <!-- 首頁 -->
-        <div class="onepage p01" id="one-main"></div>
-        <span class="top-text"></span>
+        <video src="pic/main-background.mp4" autoplay loop muted>
+            <div class="onepage p01" id="one-main">
+                <span class="top-text">時光咖啡</span>
+                <div class="content-box" id="main">
+                    <div class="direction direction-left"><img src="pic/left.png" alt="往左滑箭頭"></div>
+                    <div class="direction direction-right"><img src="pic/right.png" alt="往右滑箭頭"></div>
+                    <div class="your-class">
+                        <div><img src="pic/Espresso.jpg" alt=""><span>01</span></div>
+                        <div><img src="pic/Latte.jpeg" alt=""><span>02</span></div>
+                        <div><img src="pic/Macchiato.jpg" alt=""></div>
+                        <div><img src="pic/Mocha.jpeg" alt=""></div>
+                        <div><img src="pic/Cappiccino.jpeg" alt=""></div>
+                        <div><img src="pic/Americano.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </video>
+        
         <!-- 品牌故事 -->
         <div class="onepage p02" id="one-story">
             <span class="top-text">品牌故事</span>
             <div class="content-box" id="story" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"  data-aos-offset="200" data-aos-delay="200">
                 <div class="story-img"><img src="pic/story02.jpg" alt="品牌故事"><img src="pic/story01.jpg" alt="品牌故事"></div>
-                <div class="story-text" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500">
-                    <p>2019年</p>
-                    <p>來自台中的一對年輕情侶</p>
-                    <p>彼此有個共同的夢想</p>
-                    <p>在現今步調快、到處充滿各種壓力的生活下</p>
-                    <p>讓您能找回那曾經的快樂時光回憶</p>
-                    <p>讓您找到更多未來的目標、動力</p>
-                    <p>不管您抱著任何心情踏進時光咖啡</p>
-                    <p>都讓您抱著開心、充滿希望的心情回去</p>
-                    <p>這就是我們的初衷</p>
+                <div class="text-box">
+                    <div class="story-text" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500">
+                        <img src="pic/logo.png" alt="時光咖啡">
+                        <p>2019年，來自台中的一對年輕情侶</p>
+                        <p>彼此有個共同的夢想</p>
+                        <p>在到處充滿各種壓力的生活下</p>
+                        <p>讓我們在時光咖啡一起找回</p>
+                        <p>那曾經的快樂時光回憶</p>
+                        <p>找到更多對未來的目標、憧憬</p>
+                    </div>                    
                 </div>
+
             </div>
         </div>
         <!-- 咖啡菜單 -->
@@ -281,19 +299,31 @@
         <!-- 用心堅持 -->
         <div class="onepage p04" id="one-promise">
             <span class="top-text">用心堅持</span>
-            <div class="content-box" id="promise" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"  data-aos-offset="200" data-aos-delay="200">
-                <img src="pic/quality01.jpg" alt="保證" data-aos="fade-up-right" data-aos-duration="800" data-aos-offset="200" data-aos-delay="800">
-                <img src="pic/quality02.jpg" alt="保證" data-aos="fade-up-right" data-aos-duration="800" data-aos-offset="200" data-aos-delay="1200">
-                <img src="pic/quality03.jpg" alt="保證" data-aos="fade-up-right" data-aos-duration="800" data-aos-offset="200" data-aos-delay="1600">
+            <div id="promise" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"  data-aos-offset="200" data-aos-delay="200">
+                <div class="promise">
+                    <img src="pic/quality01.png" alt="本店精選世界各國咖啡豆" data-aos="fade-up-right" data-aos-duration="1200" data-aos-offset="200">
+                    <p>本店精選世界各國咖啡豆</p>
+                </div>
+                <div class="promise">
+                    <img src="pic/quality02.png" alt="堅持每個製作環節" data-aos="fade-up-right" data-aos-duration="1200" data-aos-offset="200">
+                    <p>堅持每個製作環節</p>
+                </div>
+                <div class="promise">
+                    <img src="pic/quality03.png" alt="讓每一杯咖啡，都讓您能滿足" data-aos="fade-up-right" data-aos-duration="1200" data-aos-offset="200">
+                    <p>讓每一杯咖啡，都讓您能滿足</p>
+                </div>
             </div>
         </div>
         <!-- 營業資訊 -->
-        <div class="onepage p05" id="one-about">
+        <div class="onepage p05 text-box"   id="one-about">
             <span class="top-text">營業資訊</span>
             <div class="content-box" id="about" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"  data-aos-offset="200" data-aos-delay="200">
-                <div class="about-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.4593462185476!2d120.68488828341036!3d24.15214813509328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d66226c3efd%3A0xae87356e4c82082f!2z5Lit5Y-L55m-6LKo!5e0!3m2!1szh-TW!2stw!4v1561086321086!5m2!1szh-TW!2stw" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="text-box">
+                    <div class="about-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.4593462185476!2d120.68488828341036!3d24.15214813509328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d66226c3efd%3A0xae87356e4c82082f!2z5Lit5Y-L55m-6LKo!5e0!3m2!1szh-TW!2stw!4v1561086321086!5m2!1szh-TW!2stw" width="300px" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
+                <div class="text-box">
                 <div class="about-text">
                     <p>店名：D&F時光咖啡</p>
                     <p>位置：籌備中</p>
@@ -314,9 +344,10 @@
                         </table>
                 </div>
             </div>
+            </div>
         </div>
         <!-- 聯絡我們 -->
-        <div class="onepage p06" id="one-contact">
+        <div class="onepage p06 text-box" id="one-contact">
             <span class="top-text">聯絡我們</span>
             <div class="content-box" id="contact" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"  data-aos-offset="200" data-aos-delay="200">
                 <form method="post" action="#">
@@ -340,9 +371,7 @@
 
         <div class="footer">
             D&F time-coffee &copy;Since 2019
-        </div>
-
-        
+        </div> 
     </div>
 
     <!-- 回頂部按鈕 -->
@@ -351,6 +380,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>

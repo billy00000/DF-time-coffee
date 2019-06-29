@@ -12,7 +12,7 @@ html{
     box-sizing: border-box;
 }
 
-/* logo線上生成 http://www.akuziti.com/ 潮字社时光寓意创作(時光寓意) #FF7000 */
+/* logo線上生成 https://www.qt86.com/fanti.php 78.夢境愛麗絲 #FF7000 */
 
 .logo img{
     position: fixed;
@@ -155,12 +155,49 @@ html{
     background-color: burlywood;
 }
 
+/* 輪播圖箭頭 */
+
+.direction img{
+    transition: all 0.3s ease-out;
+    position: absolute;
+    top: 290px;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.direction img:hover{
+     /* 滑入圖片放大 */
+    transform:scale(1.2,1.2);
+    opacity: 1;
+}
+
+.direction-left img{
+    left: 250px;
+}
+
+.direction-right img{
+    right: 250px;
+}
+
+/* 輪播圖 */
+.your-class img{
+    width: 95%;
+}
+
+.slick-arrow{
+    display: none !important;
+}
+
+/* .slick-slide[tabindex="0"]{
+    width: 400px;
+} */
+
 /* 一頁式底圖設定 */
 .onepage{
     width: 100%;
     height: 100vh;
     margin:0 auto;
-    padding-top: 150px;
+    padding-top: 180px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -171,7 +208,7 @@ html{
 /* 每頁置中說明文字 */
 .top-text{
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -233,19 +270,42 @@ html{
 /* 每頁內容半透明底圖 */
 .content-box{
     background-color:rgba(255,255,255,0.6);
-    width:80%;
-    height: 95%;
+    width:70%;
+    height: 90%;
     padding: 30px;
     box-shadow:1px 1px 5px gray;
     margin: 0 auto;
 }
 
+/* 首頁 */
+
+#main{
+    height: 300px;
+    padding: 5px 5px 0 5px;
+    text-align: center;
+    z-index: 2;
+}
+
+#main span{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* 首頁背景影片 */
+
+.box video{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
 /* 品牌故事 */
 
-#story{ 
-    position:relative;
-}
 #story{
+    position:relative;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -254,9 +314,15 @@ html{
     width: 100%;
     padding: 30px;
     font-size: 30px;
+    text-align: center;
 }
 
-#story img{
+.story-text img{
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.story-img img{
     padding: 20px;
     width: 45%;
     position:absolute;
@@ -266,9 +332,10 @@ html{
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
-#story img:last-child:hover{
+.story-img img:last-child:hover{
 	 /* 滑入時第一張透明度設0 */
-	  opacity:0;}
+    opacity:0;
+}
 
 /* 咖啡菜單 */
 #menu{
@@ -289,7 +356,7 @@ html{
 .menu p{
     margin: 0;
     font-size: 22px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .menu-one-text{
@@ -356,38 +423,70 @@ html{
 
 /* 用心堅持 */
 
+.promise p {
+    opacity: 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+.promise:hover p {
+    opacity: 1;
+}
+.promise {
+    transition-property: opacity;
+    transition-duration: 1;
+    transition-delay: 1;
+}
+
+
 #promise{
     display: grid;
     grid-template-columns: auto auto auto;
+    margin: 0 100px;
+    text-align: center;
+    padding-top: 140px;
 }
 
 #promise img{
     /* box-shadow:1px 1px 3px black; */
-    display: inline-block;
-    width: 100%;
-    height: 80%;
+    width: 440px;
+    height: 440px;
+    text-align: center;
     padding: 8px;
-    background-size: cover;
-    background-position: center;
 }
+
+#promise img:hover{
+    transform:rotate(-360deg);
+    transition: all 5s ease-out;
+}
+
 
 /* 聯絡資訊 */
 #about{
     display: grid;
     grid-template-columns: 50% 50%;
+    width: 40%;
+    height: 50%;
 }
 
-.about-map{
+.text-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-text>p{
     width: 100%;
-    height: 100%;
-    padding: 20px;
+    text-align: center;
 }
-
 .about-text{
     width: 100%;
-    height: 100%;
-    padding: 30px;
+    /* height: 100%; */
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .about-text table{
@@ -460,7 +559,8 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     bottom: 0;
 }
 
-@media only screen and (max-width: 480px){
+/* 手機板 */
+@media only screen and (max-width: 767px){
 
     .logo img{
         left: 20%;
@@ -526,7 +626,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         text-align: center;
     }
     
-    #story img{
+    .story-img img{
         padding: 40px 20px 0 20px;
         width:95%;
     }
@@ -534,11 +634,25 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     #promise{
         grid-template-columns: unset;
         grid-template-rows: 33% 33% 33%;
+        padding: 0;
+        margin: auto;
     }  
+
+    #promise img{
+        width:180px;
+        height: 180px;
+    }
+
+    .promise p {
+        opacity: 1;
+        font-size: 20px;
+    }
 
     #about{
         grid-template-columns: unset;
         grid-template-rows: 50% 50%;
+        width:70%;
+        height: 70%;
     }
 
     .about-text{
@@ -547,8 +661,14 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         padding-top: 5px;
     }
 
+
     .about-text table{
         font-size: 16px; 
+    }
+
+    .about-map iframe{
+        width: 200px;
+        height: 200px;
     }
 
     #one-contact{
@@ -592,7 +712,6 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     }
 }
 
-/* 去廣告
-img[alt="www.000webhost.com"]{
-    display: none;
-} */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+}
