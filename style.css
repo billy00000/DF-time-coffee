@@ -155,43 +155,6 @@ html{
     background-color: burlywood;
 }
 
-/* 輪播圖箭頭 */
-
-.direction img{
-    transition: all 0.3s ease-out;
-    position: absolute;
-    top: 290px;
-    z-index: 2;
-    opacity: 0.8;
-}
-
-.direction img:hover{
-     /* 滑入圖片放大 */
-    transform:scale(1.2,1.2);
-    opacity: 1;
-}
-
-.direction-left img{
-    left: 250px;
-}
-
-.direction-right img{
-    right: 250px;
-}
-
-/* 輪播圖 */
-.your-class img{
-    width: 95%;
-}
-
-.slick-arrow{
-    display: none !important;
-}
-
-/* .slick-slide[tabindex="0"]{
-    width: 400px;
-} */
-
 /* 一頁式底圖設定 */
 .onepage{
     width: 100%;
@@ -217,6 +180,8 @@ html{
     transform: translateX(-50%);
     color: #fff;
     font-size: 50px;
+    z-index: 2;
+    background-color:rgba(255,255,255,0.2);
 }
 
 
@@ -228,10 +193,12 @@ html{
 
 #one-story{
     background-image: url(pic/story.jpg);
+    padding-top: 220px;
 }
 
 #one-menu{
     background-image: url(pic/menu.jpg);
+    padding-top: 160px;
 }
 
 #one-promise{
@@ -260,30 +227,31 @@ html{
     border-radius: 999em;
     transform:scale(1,1);
     transition: all 0.3s ease-out;
+    background-color:rgba(255, 255, 255, 0.5);
 }
 
 .btn-top img:hover{
      /* 滑入圖片放大 */
     transform:scale(1.1,1.1);
+    background-color:rgba(255, 255, 255, 1);
 }
 
 /* 每頁內容半透明底圖 */
 .content-box{
-    background-color:rgba(255,255,255,0.6);
+    /* background-color:rgba(255,255,255,0.6); */
+    /* box-shadow:1px 1px 5px gray; */
     width:70%;
     height: 90%;
     padding: 30px;
-    box-shadow:1px 1px 5px gray;
     margin: 0 auto;
 }
 
 /* 首頁 */
 
 #main{
-    height: 300px;
     padding: 5px 5px 0 5px;
     text-align: center;
-    z-index: 2;
+    height: 100%;
 }
 
 #main span{
@@ -308,23 +276,43 @@ html{
     position:relative;
     display: grid;
     grid-template-columns: 50% 50%;
+    height: 70%;
+    
 }
 
 .story-text{
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     font-size: 30px;
     text-align: center;
+    background-color:rgba(255,255,255,0.8);
+    box-shadow:1px 1px 5px gray;
+    border-radius: 9em;
+    transition: all 0.3s ease-out;
+}
+
+.story-text p{
+    color:black;
+}
+
+.story-text:hover{
+    background-color:rgba(255,255,255,0.6);
+}
+
+.story-text:hover p{
+    color:black;
 }
 
 .story-text img{
     width: 60%;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
 }
 
 .story-img img{
-    padding: 20px;
-    width: 45%;
+    padding: 10px;
+    width: 40%;
     position:absolute;
     /* 淡出淡入效果1秒 */
     -webkit-transition: opacity 1s ease-in-out;
@@ -343,6 +331,9 @@ html{
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 50% 50%;
     text-align: center;
+    background-color:rgba(255,255,255,0.6);
+    box-shadow:1px 1px 5px gray;
+    height: 95%;
 }
 
 #menu img{
@@ -366,7 +357,6 @@ html{
 .menu-text p{
     font-size: 18px;
     display: inline-block;
-    margin-top: 5px;
 }
 
 .menu-text{
@@ -423,7 +413,7 @@ html{
 
 /* 用心堅持 */
 
-.promise p {
+/* .promise p {
     opacity: 0;
     font-size: 40px;
     color: #fff;
@@ -444,20 +434,67 @@ html{
     grid-template-columns: auto auto auto;
     margin: 0 100px;
     text-align: center;
-    padding-top: 140px;
-}
-
+    padding-top: 100px;
+    z-index: 2;
+} */
+/* 
 #promise img{
     /* box-shadow:1px 1px 3px black; */
-    width: 440px;
-    height: 440px;
+    /* width: 400px;
+    height: 400px;
     text-align: center;
     padding: 8px;
-}
+} */
 
-#promise img:hover{
+/* #promise img:hover{
     transform:rotate(-360deg);
     transition: all 5s ease-out;
+} */ 
+
+/* 輪播圖箭頭 */
+
+.direction img{
+    transition: all 0.3s ease-out;
+    position: absolute;
+    top: 300px;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.direction img:hover{
+     /* 滑入圖片放大 */
+    transform:scale(1.2,1.2);
+    opacity: 1;
+}
+
+.direction-left img{
+    left: 160px;
+}
+
+.direction-right img{
+    right: 160px;
+}
+
+/* 輪播圖 */
+.your-class img{
+    width: 95%;
+    height: 300px;
+}
+
+.your-class{
+    z-index: 2;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.your-class span{
+    color: #fff;
+    font-size: 28px;
+}
+
+.slick-arrow{
+    display: none !important;
 }
 
 
@@ -467,6 +504,8 @@ html{
     grid-template-columns: 50% 50%;
     width: 40%;
     height: 50%;
+    background-color:rgba(255,255,255,0.8);
+    box-shadow:1px 1px 5px gray;
 }
 
 .text-box{
@@ -503,6 +542,8 @@ html{
 #contact{
     width: 40%;
     height: 70%;
+    background-color:rgba(255,255,255,0.8);
+    box-shadow:1px 1px 5px gray;
 }
 
 .form{
@@ -614,10 +655,39 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         margin-top: 100px;
     }
 
+    #one-menu{
+        padding-top: 110px;
+    }
+
+    .flip-card table td{
+        font-size: 16px;
+        padding: 0 2px;
+    }
+    
+    .flip-card table{
+        line-height: 40px;
+    }
+    
+    .flip-card table td[colspan]{
+        font-size: 20px;
+        line-height: 10px;
+    }
 
     #story{
         grid-template-columns: unset;
-        grid-template-rows: 35% 65%;
+        grid-template-rows: 50% 90%;
+    }
+
+    .direction{
+        display: none;
+    }
+
+    .your-class span{
+        font-size: 22px;
+    }
+
+    .your-class img{
+        height: 200px;
     }
 
     .story-text{
@@ -630,7 +700,9 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         padding: 40px 20px 0 20px;
         width:95%;
     }
-
+    #one-story{
+        padding-top: 110px;
+    }
     #promise{
         grid-template-columns: unset;
         grid-template-rows: 33% 33% 33%;
