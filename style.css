@@ -628,6 +628,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
     .logo img{
         height: 38px;
+        left:0%;
     }
 
     .navbar-collapse ul li{
