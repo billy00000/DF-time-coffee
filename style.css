@@ -21,6 +21,7 @@ html{
     height: 50px;
     margin-top: 10px;
     transition: all 0.3s ease-out;
+    width: 140px;
 }
 
 .logo img:hover{
@@ -280,6 +281,7 @@ html{
 
 .p01 span img{
     transition: all 0.3s ease-out;
+    width: 80%;
 }
 
 .p01 span img:hover{
@@ -304,7 +306,7 @@ html{
     text-align: center;
     background-color:rgba(255,255,255,0.8);
     box-shadow:1px 1px 5px gray;
-    border-radius: 9em;
+    border-radius: 3em;
     transition: all 0.3s ease-out;
 }
 
@@ -355,7 +357,7 @@ html{
 
 #menu img{
     width: 90%;
-    height: 220px;
+    height: 160px;
     box-shadow:1px 1px 0.5px gray;
     border-radius: 1em;
     transition: all 0.5s;
@@ -363,12 +365,12 @@ html{
 
 .menu p{
     margin: 0;
-    font-size: 22px;
+    font-size: 18px;
     margin: 0 5px;
 }
 
 .menu-one-text{
-    margin-top: 230px;
+    margin-top: 160px;
 }
 
 .menu-text p{
@@ -382,19 +384,19 @@ html{
 
 .flip-card table td{
     color: rgb(221, 124, 44);
-    font-size: 30px;
+    font-size: 24px;
     padding: 0 10px;
     font-weight: bold;
 }
 
 .flip-card table{
-    line-height: 40px;
+    line-height: 30px;
     margin: 10px;
     margin: 0 auto;
 }
 
 .flip-card table td[colspan]{
-    font-size: 46px;
+    font-size: 30px;
     line-height: 50px;
 }
 
@@ -473,7 +475,7 @@ html{
 .direction img{
     transition: all 0.3s ease-out;
     position: absolute;
-    top: 300px;
+    top: 400px;
     z-index: 3;
     opacity: 0.8;
 }
@@ -485,11 +487,11 @@ html{
 }
 
 .direction-left img{
-    left: 160px;
+    left: 120px;
 }
 
 .direction-right img{
-    right: 160px;
+    right: 120px;
 }
 
 .p04{
@@ -523,8 +525,8 @@ html{
 #about{
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 40%;
-    height: 50%;
+    width: 50%;
+    height: 70%;
     background-color:rgba(255,255,255,0.8);
     box-shadow:1px 1px 5px gray;
 }
@@ -562,7 +564,7 @@ html{
 /* 聯絡我們(表單) */
 #contact{
     width: 40%;
-    height: 70%;
+    height: 90%;
     background-color:rgba(255,255,255,0.8);
     box-shadow:1px 1px 5px gray;
 }
@@ -625,8 +627,9 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 @media only screen and (max-width: 767px){
 
     .logo img{
-        left: 20%;
+        left: 35%;
         height: 38px;
+
     }
 
     .navbar-collapse ul li{
