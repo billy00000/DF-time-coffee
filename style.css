@@ -653,10 +653,12 @@ input[type="reset"]:hover, input[type="submit"]:hover{
 
     .p01 span img{
         display: none;
+        opacity: 0;
     }
 
     .video{
         display: none;
+        opacity: 0;
     }
 
     .video-mobile{
