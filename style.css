@@ -181,7 +181,6 @@ html{
     color: #fff;
     font-size: 50px;
     z-index: 2;
-    background-color:rgba(255,255,255,0.2);
 }
 
 
@@ -248,7 +247,7 @@ html{
 
 /* 首頁 */
 
-#main{
+/* #main{
     padding: 5px 5px 0 5px;
     text-align: center;
     height: 100%;
@@ -257,7 +256,7 @@ html{
 #main span{
     color: #fff;
     font-size: 20px;
-}
+} */
 
 /* 首頁背景影片 */
 
@@ -268,6 +267,23 @@ html{
     left: 0;
     height: 100vh;
     width: 100%;
+}
+
+.video-mobile{
+    display: none;
+}
+
+.p01 span{
+    text-align: center;
+}
+
+.p01 span img{
+    transition: all 0.3s ease-out;
+}
+
+.p01 span img:hover{
+     /* 滑入圖片放大 */
+    transform:scale(1.1,1.1);
 }
 
 /* 品牌故事 */
@@ -475,6 +491,10 @@ html{
     right: 160px;
 }
 
+.p04{
+    padding-top: 260px;
+}
+
 /* 輪播圖 */
 .your-class img{
     width: 95%;
@@ -630,6 +650,21 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         top: 65px;
     }
 
+    .p01 span img{
+        display: none;
+    }
+
+    .video{
+        display: none;
+    }
+
+    .video-mobile{
+        display: block;
+        height: 100vh;
+    }
+
+
+
     #menu{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -652,7 +687,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     }
 
     .menu-one-text{
-        margin-top: 100px;
+        margin-top: 95px;
     }
 
     #one-menu{
@@ -690,10 +725,14 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         height: 200px;
     }
 
+    .p04{
+        padding-top: 180px;
+    }
+
     .story-text{
         padding: 20px;
         font-size: 16px;
-        text-align: center;
+        border-radius: 5em;
     }
     
     .story-img img{
@@ -724,7 +763,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
         grid-template-columns: unset;
         grid-template-rows: 50% 50%;
         width:70%;
-        height: 70%;
+        height: 80%;
     }
 
     .about-text{
@@ -749,7 +788,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
     }
     #contact{
         width: 60%;
-        height: 75%;
+        height: 85%;
     }
 
     #contact label{
