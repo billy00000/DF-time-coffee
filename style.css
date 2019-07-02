@@ -424,6 +424,12 @@ html{
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    /* Chrome和Safari */
+    -webkit-backface-visibility:hidden;	
+    /* Firefox */
+    -moz-backface-visibility:hidden; 
+    /* Internet Explorer	  */
+    -ms-backface-visibility:hidden; 	 
 }
 /* Style the back side */
 .flip-card-back {
