@@ -18,10 +18,9 @@ html{
     position: fixed;
     z-index: 1001;
     left: 3%;
-    height: 50px;
     margin-top: 10px;
     transition: all 0.3s ease-out;
-    width: 140px;
+    width: 280px;
 }
 
 .logo img:hover{
@@ -83,13 +82,17 @@ html{
     position: fixed;
 }
 
+/* .navbar-collapse ul{
+    text-align: center;
+} */
+
 .navbar-collapse ul li img{
     width: 30px;
     height: 30px;
 }
 
 .navbar-collapse ul li{
-    font-size: 36px;
+    font-size: 30px;
     text-align: center;
     margin-top: 10px;
     padding: 0;
@@ -184,6 +187,16 @@ html{
     z-index: 2;
 }
 
+.top-text img{
+    transition: all 0.3s ease-out;
+    width: 80%;
+}
+
+.top-text img:hover{
+
+    /* 滑入圖片放大 */
+    transform:scale(1.1,1.1);
+}
 
 /* 每頁底圖 */
 
@@ -198,7 +211,7 @@ html{
 
 #one-menu{
     background-image: url(pic/menu.jpg);
-    padding-top: 160px;
+    padding-top: 180px;
 }
 
 #one-promise{
@@ -207,6 +220,7 @@ html{
 
 #one-about{
     background-image: url(pic/about.jpg);
+    padding-top: 120px;
 }
 
 #one-contact{
@@ -216,6 +230,7 @@ html{
 /* 回頂部按鈕 */
 .btn-top{
     overflow:hidden;
+    display: none;
 }
 
 .btn-top img{
@@ -227,14 +242,13 @@ html{
     border-radius: 999em;
     transform:scale(1,1);
     transition: all 0.3s ease-out;
-    background-color:rgba(255, 255, 255, 0.5);
     z-index: 3;
+    border: 3px solid #fff;
 }
 
 .btn-top img:hover{
      /* 滑入圖片放大 */
     transform:scale(1.1,1.1);
-    background-color:rgba(255, 255, 255, 1);
 }
 
 /* 每頁內容半透明底圖 */
@@ -275,20 +289,6 @@ html{
     display: none;
 }
 
-.p01 span{
-    text-align: center;
-}
-
-.p01 span img{
-    transition: all 0.3s ease-out;
-    width: 80%;
-}
-
-.p01 span img:hover{
-     /* 滑入圖片放大 */
-    transform:scale(1.1,1.1);
-}
-
 /* 品牌故事 */
 
 #story{
@@ -327,6 +327,7 @@ html{
     margin-top: 10px;
     margin-bottom: 10px;
     opacity: 1;
+    transition: all 0.3s ease-out;
 }
 
 .story-img img{
@@ -344,6 +345,27 @@ html{
     opacity:0;
 }
 
+/* 打字效果 */
+
+.type{
+    text-decoration:underline;
+}
+
+.type::after{
+    content: "";
+    border-right: 2px solid #000;
+    animation: 0.5s infinite shine;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* 咖啡菜單 */
 #menu{
     display: grid;
@@ -357,7 +379,7 @@ html{
 
 #menu img{
     width: 90%;
-    height: 160px;
+    height: 220px;
     box-shadow:1px 1px 0.5px gray;
     border-radius: 1em;
     transition: all 0.5s;
@@ -370,7 +392,7 @@ html{
 }
 
 .menu-one-text{
-    margin-top: 160px;
+    margin-top: 250px;
 }
 
 .menu-text p{
@@ -383,7 +405,7 @@ html{
 }
 
 .flip-card table td{
-    color: rgb(221, 124, 44);
+    color: rgb(185, 68, 0);
     font-size: 24px;
     padding: 0 10px;
     font-weight: bold;
@@ -570,13 +592,13 @@ html{
 /* 聯絡我們(表單) */
 #contact{
     width: 40%;
-    height: 90%;
+    height: 65%;
     background-color:rgba(255,255,255,0.8);
     box-shadow:1px 1px 5px gray;
 }
 
 .form{
-    width:80%;
+    width:90%;
     height:100%;
     margin: 0 auto;
   }
